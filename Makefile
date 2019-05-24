@@ -5,6 +5,7 @@ CXXFLAGS?=-g -O2 -Wall -Wno-unknown-pragmas -std=c++17 \
 	$(shell pkg-config --cflags libpq)
 CXXINCFLAGS?=
 LDFLAGS?=-pthread \
+	-lboost_system \
 	$(shell pkg-config --libs libpq) 
 CXX?=g++
 
